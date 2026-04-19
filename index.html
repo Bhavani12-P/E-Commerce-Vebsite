@@ -6,7 +6,7 @@
     <style>
         body { margin: 0; background: #141414; color: white; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; overflow-x: hidden; }
         
-        /* Navigation with New Sections */
+        /* Navigation with Updated Links */
         .nav { 
             padding: 20px 50px; 
             display: flex; 
@@ -19,10 +19,10 @@
             box-sizing: border-box; 
         }
         .nav-left, .nav-right { display: flex; align-items: center; gap: 20px; }
-        .logo { color: #E50914; font-size: 28px; font-weight: bold; margin-right: 20px; }
+        .logo { color: #E50914; font-size: 28px; font-weight: bold; margin-right: 20px; text-decoration: none; }
         .nav-link { color: #e5e5e5; text-decoration: none; font-size: 14px; transition: color 0.3s; cursor: pointer; }
         .nav-link:hover { color: #b3b3b3; }
-        .profile-icon { width: 32px; height: 32px; border-radius: 4px; background: #e50914; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; }
+        .profile-icon { width: 32px; height: 32px; border-radius: 4px; background: #e50914; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; text-decoration: none; color: white; }
 
         /* Hero Section */
         .hero { height: 75vh; background: linear-gradient(to right, #141414 10%, transparent 60%), url('https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=2070') center/cover; display: flex; align-items: center; padding-left: 50px; position: relative; }
@@ -60,16 +60,17 @@
 <body>
     <nav class="nav">
         <div class="nav-left">
-            <div class="logo">COGNIFLIX</div>
-            <a class="nav-link">Home</a>
-            <a class="nav-link">TV Shows</a>
-            <a class="nav-link">Movies</a>
-            <a class="nav-link">Latest</a>
+            <a href="index.html" class="logo">COGNIFLIX</a>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="tv-shows.html" class="nav-link">TV Shows</a>
+            <a href="movies.html" class="nav-link">Movies</a>
+            <a href="latest.html" class="nav-link">Latest</a>
         </div>
         <div class="nav-right">
-            <span class="nav-link">🔍 Search</span>
-            <span class="nav-link">Profile</span>
-            <div class="profile-icon">BC</div> </div>
+            <a href="search.html" class="nav-link">🔍 Search</a>
+            <a href="profile.html" class="nav-link">Profile</a>
+            <a href="profile.html" class="profile-icon">BC</a> 
+        </div>
     </nav>
 
     <header class="hero">
@@ -82,26 +83,26 @@
     <section class="row">
         <h3>Trending Now</h3>
         <div class="grid-container">
-            <a href="#" class="card-link"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1505506819641-fb0d45a563d2?w=400')"><span class="card-title">Dark</span></div></a>
-            <a href="#" class="card-link"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=400')"><span class="card-title">Wednesday</span></div></a>
-            <a href="#" class="card-link"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1534447677768-be436bb09401?w=400')"><span class="card-title">Stranger Things</span></div></a>
-            <a href="#" class="card-link"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=400')"><span class="card-title">Interstellar</span></div></a>
-            <a href="#" class="card-link"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400')"><span class="card-title">Inception</span></div></a>
-            <a href="#" class="card-link"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1506318137071-a8e063b4b4bf?w=400')"><span class="card-title">Dune</span></div></a>
+            <a href="movie-info.html?title=dark" class="card-link"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1505506819641-fb0d45a563d2?w=400')"><span class="card-title">Dark</span></div></a>
+            <a href="movie-info.html?title=wednesday" class="card-link"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=400')"><span class="card-title">Wednesday</span></div></a>
+            <a href="movie-info.html?title=stranger-things" class="card-link"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1534447677768-be436bb09401?w=400')"><span class="card-title">Stranger Things</span></div></a>
+            <a href="movie-info.html?title=interstellar" class="card-link"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=400')"><span class="card-title">Interstellar</span></div></a>
+            <a href="movie-info.html?title=inception" class="card-link"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400')"><span class="card-title">Inception</span></div></a>
+            <a href="movie-info.html?title=dune" class="card-link"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1506318137071-a8e063b4b4bf?w=400')"><span class="card-title">Dune</span></div></a>
 
-            <a href="#" class="card-link"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1484589065579-248adc018243?w=400')"><span class="card-title">Blade Runner</span></div></a>
-            <a href="#" class="card-link"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1538370910046-05ec0a6c634a?w=400')"><span class="card-title">Moon</span></div></a>
-            <a href="#" class="card-link"><div class="card" style="background-color: #222;"><span class="card-title">The Matrix</span></div></a>
-            <a href="#" class="card-link"><div class="card" style="background-color: #222;"><span class="card-title">Tenet</span></div></a>
-            <a href="#" class="card-link"><div class="card" style="background-color: #222;"><span class="card-title">Arrival</span></div></a>
-            <a href="#" class="card-link"><div class="card" style="background-color: #222;"><span class="card-title">Ex Machina</span></div></a>
+            <a href="movie-info.html" class="card-link"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1484589065579-248adc018243?w=400')"><span class="card-title">Blade Runner</span></div></a>
+            <a href="movie-info.html" class="card-link"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1538370910046-05ec0a6c634a?w=400')"><span class="card-title">Moon</span></div></a>
+            <a href="movie-info.html" class="card-link"><div class="card" style="background-color: #222;"><span class="card-title">The Matrix</span></div></a>
+            <a href="movie-info.html" class="card-link"><div class="card" style="background-color: #222;"><span class="card-title">Tenet</span></div></a>
+            <a href="movie-info.html" class="card-link"><div class="card" style="background-color: #222;"><span class="card-title">Arrival</span></div></a>
+            <a href="movie-info.html" class="card-link"><div class="card" style="background-color: #222;"><span class="card-title">Ex Machina</span></div></a>
 
-            <a href="#" class="card-link"><div class="card" style="background-color: #222;"><span class="card-title">The Prestige</span></div></a>
-            <a href="#" class="card-link"><div class="card" style="background-color: #222;"><span class="card-title">Gravity</span></div></a>
-            <a href="#" class="card-link"><div class="card" style="background-color: #222;"><span class="card-title">Avatar</span></div></a>
-            <a href="#" class="card-link"><div class="card" style="background-color: #222;"><span class="card-title">Oblivion</span></div></a>
-            <a href="#" class="card-link"><div class="card" style="background-color: #222;"><span class="card-title">The Martian</span></div></a>
-            <a href="#" class="card-link"><div class="card" style="background-color: #222;"><span class="card-title">Coherence</span></div></a>
+            <a href="movie-info.html" class="card-link"><div class="card" style="background-color: #222;"><span class="card-title">The Prestige</span></div></a>
+            <a href="movie-info.html" class="card-link"><div class="card" style="background-color: #222;"><span class="card-title">Gravity</span></div></a>
+            <a href="movie-info.html" class="card-link"><div class="card" style="background-color: #222;"><span class="card-title">Avatar</span></div></a>
+            <a href="movie-info.html" class="card-link"><div class="card" style="background-color: #222;"><span class="card-title">Oblivion</span></div></a>
+            <a href="movie-info.html" class="card-link"><div class="card" style="background-color: #222;"><span class="card-title">The Martian</span></div></a>
+            <a href="movie-info.html" class="card-link"><div class="card" style="background-color: #222;"><span class="card-title">Coherence</span></div></a>
         </div>
     </section>
 </body>
