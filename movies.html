@@ -3,7 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <title>CogniFlix | Movies</title>
-    </head>
+    <style>
+        /* Global Styles */
+        body { margin: 0; background: #141414; color: white; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; overflow-x: hidden; }
+        
+        /* Navigation (Fixed at top) */
+        .nav { 
+            padding: 20px 50px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            background: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%); 
+            position: fixed; 
+            width: 100%; 
+            z-index: 100; 
+            box-sizing: border-box; 
+        }
+        .nav-left, .nav-right { display: flex; align-items: center; gap: 20px; }
+        .logo { color: #E50914; font-size: 28px; font-weight: bold; margin-right: 20px; text-decoration: none; }
+        .nav-link { color: #e5e5e5; text-decoration: none; font-size: 14px; transition: color 0.3s; cursor: pointer; }
+        .nav-link:hover { color: #b3b3b3; }
+        .profile-icon { width: 32px; height: 32px; border-radius: 4px; background: #e50914; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; }
+
+        /* Hero Section (Cinematic Background) */
+        .hero { 
+            height: 75vh; 
+            background: linear-gradient(to right, #141414 10%, transparent 60%), 
+                        url('https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1200') center/cover; 
+            display: flex; 
+            align-items: center; 
+            padding-left: 50px; 
+            position: relative; 
+        }
+        .hero-content { max-width: 550px; z-index: 2; }
+        .hero-content h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+        
+        /* Play/Info Buttons */
+        .btn-group { display: flex; gap: 15px; margin-top: 20px; }
+        .btn { padding: 12px 35px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 16px; display: flex; align-items: center; gap: 10px; }
+        .play { background: white; color: black; }
+        .info { background: rgba(109, 109, 110, 0.7); color: white; }
+
+        /* Grid Layout */
+        .row { padding: 40px 50px; background-color: #141414; position: relative; z-index: 5; margin-top: -20px; }
+        .row h3 { font-size: 20px; margin-bottom: 15px; color: #e5e5e5; }
+        
+        .grid-container { 
+            display: grid; 
+            grid-template-columns: repeat(6, 1fr); 
+            gap: 15px; 
+            padding-bottom: 40px;
+        }
+
+        .card-link { text-decoration: none; color: inherit; }
+        .card { 
+            height: 130px; 
+            background: #333; 
+            border-radius: 4px; 
+            display: flex; 
+            align-items: flex-end; 
+            transition: transform 0.3s ease; 
+            cursor: pointer; 
+            overflow: hidden; 
+            border: 1px solid #222; 
+            background-size: cover;
+            background-position: center;
+        }
+        .card:hover { transform: scale(1.08); z-index: 10; box-shadow: 0 0 20px rgba(0,0,0,0.9); }
+        .card-title { background: rgba(0,0,0,0.7); width: 100%; text-align: center; font-size: 13px; padding: 8px 0; font-weight: 600; }
+    </style>
+</head>
 <body>
     <nav class="nav">
         <div class="nav-left">
@@ -15,23 +84,30 @@
         </div>
         <div class="nav-right">
             <a href="search.html" class="nav-link">🔍 Search</a>
-            <div class="profile-icon">BC</div>
+            <div class="profile-icon">BC</div> 
         </div>
     </nav>
 
-    <header class="hero" style="background-image: url('https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1200');">
+    <header class="hero">
         <div class="hero-content">
             <h1>Movies</h1>
-            <p>The cinematic world, ranked and recommended for you.</p>
+            <p>The cinematic world, ranked and recommended for you by our polyglot microservices.</p>
+            <div class="btn-group">
+                <button class="btn play">▶ Play</button>
+                <button class="btn info">ⓘ More Info</button>
+            </div>
         </div>
     </header>
 
     <section class="row">
         <h3>Blockbuster Films</h3>
         <div class="grid-container">
-            <a href="movie-info.html" style="text-decoration:none; color:white;"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400')"><span class="card-title">Inception</span></div></a>
-            <a href="movie-info.html" style="text-decoration:none; color:white;"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1506318137071-a8e063b4b4bf?w=400')"><span class="card-title">Dune</span></div></a>
-            <a href="movie-info.html" style="text-decoration:none; color:white;"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=400')"><span class="card-title">Interstellar</span></div></a>
+            <a href="movie-info.html?title=inception" class="card-link"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400')"><span class="card-title">Inception</span></div></a>
+            <a href="movie-info.html?title=interstellar" class="card-link"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=400')"><span class="card-title">Interstellar</span></div></a>
+            <a href="movie-info.html?title=dune" class="card-link"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1506318137071-a8e063b4b4bf?w=400')"><span class="card-title">Dune</span></div></a>
+            <a href="movie-info.html?title=blade-runner" class="card-link"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1484589065579-248adc018243?w=400')"><span class="card-title">Blade Runner</span></div></a>
+            <a href="movie-info.html?title=the-matrix" class="card-link"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1538370910046-05ec0a6c634a?w=400')"><span class="card-title">The Matrix</span></div></a>
+            <a href="movie-info.html?title=arrival" class="card-link"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1506318137071-a8e063b4b4bf?w=400')"><span class="card-title">Arrival</span></div></a>
         </div>
     </section>
 </body>
