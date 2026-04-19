@@ -20,11 +20,13 @@
 }
 
 .logo {
-    color: #E50914; /* Brand Red */
-    font-size: 28px;
-    font-weight: bold;
+   color: #E50914;
     text-decoration: none;
-    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: unset;
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
 }
 
 .nav-menu {
