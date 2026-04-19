@@ -43,6 +43,20 @@
     transition: opacity 0.3s;
 }
 
+.card {
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Essential for title positioning */
+}
+
+.card-title {
+    background: rgba(0, 0, 0, 0.7); /* Dark background for text readability */
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
 /* 3. The Row: Improved solid background and gradient */
 .row {
     padding: 60px 50px; /* Increased padding for better spacing */
