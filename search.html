@@ -4,20 +4,134 @@
     <meta charset="UTF-8">
     <title>CogniFlix | Search</title>
     <style>
-        /* [Copy CSS from index.html] */
-        .search-container { padding: 100px 50px 20px 50px; text-align: center; }
-        .search-input { width: 60%; padding: 15px; background: #333; border: 1px solid #555; color: white; border-radius: 4px; font-size: 18px; }
+        /* Reusing your global styles */
+        body { margin: 0; background: #141414; color: white; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; overflow-x: hidden; }
+        
+        .nav { 
+            padding: 20px 50px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            background: #000; 
+            position: fixed; 
+            width: 100%; 
+            z-index: 100; 
+            box-sizing: border-box; 
+        }
+
+        .search-container { 
+            padding: 120px 50px 40px 50px; 
+            text-align: center; 
+            background: linear-gradient(to bottom, #000, #141414);
+        }
+
+        .search-input { 
+            width: 70%; 
+            padding: 15px 25px; 
+            background: #333; 
+            border: 1px solid #555; 
+            color: white; 
+            border-radius: 4px; 
+            font-size: 20px; 
+            outline: none;
+        }
+
+        .search-input:focus { border-color: #E50914; background: #444; }
+
+        .row { padding: 0 50px; }
+        
+        .grid-container { 
+            display: grid; 
+            grid-template-columns: repeat(6, 1fr); 
+            gap: 15px; 
+            padding-bottom: 40px;
+        }
+
+        /* Hide cards by default until searching */
+        .card-link { 
+            text-decoration: none; 
+            color: inherit; 
+            display: none; /* Hidden initially */
+        }
+
+        .card { 
+            height: 130px; 
+            border-radius: 4px; 
+            display: flex; 
+            align-items: flex-end; 
+            transition: transform 0.3s ease; 
+            cursor: pointer; 
+            border: 1px solid #222; 
+            background-size: cover;
+            background-position: center;
+        }
+        .card:hover { transform: scale(1.05); }
+        .card-title { background: rgba(0,0,0,0.7); width: 100%; text-align: center; font-size: 13px; padding: 8px 0; font-weight: 600; }
+        
+        .no-results { text-align: center; color: #777; margin-top: 50px; font-size: 18px; }
     </style>
 </head>
 <body>
-    <nav class="nav"></nav>
+    <nav class="nav">
+        <div class="logo" style="color: #E50914; font-size: 28px; font-weight: bold;">COGNIFLIX</div>
+        <a href="index.html" style="color: white; text-decoration: none;">Back to Home</a>
+    </nav>
+
     <div class="search-container">
-        <input type="text" class="search-input" placeholder="Search for movies, TV shows, or genres...">
+        <input type="text" id="movieSearch" class="search-input" placeholder="Search for movies or shows..." onkeyup="filterMovies()">
     </div>
+
     <section class="row">
-        <h3>Suggestions for you</h3>
-        <div class="grid-container">
-            </div>
+        <div id="resultsGrid" class="grid-container">
+            <a href="movie-info.html" class="card-link" data-title="dark">
+                <div class="card" style="background-image: url('https://images.unsplash.com/photo-1505506819641-fb0d45a563d2?w=400')"><span class="card-title">Dark</span></div>
+            </a>
+            <a href="movie-info.html" class="card-link" data-title="wednesday">
+                <div class="card" style="background-image: url('https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=400')"><span class="card-title">Wednesday</span></div>
+            </a>
+            <a href="movie-info.html" class="card-link" data-title="stranger things">
+                <div class="card" style="background-image: url('https://images.unsplash.com/photo-1534447677768-be436bb09401?w=400')"><span class="card-title">Stranger Things</span></div>
+            </a>
+            <a href="movie-info.html" class="card-link" data-title="inception">
+                <div class="card" style="background-image: url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400')"><span class="card-title">Inception</span></div>
+            </a>
+            <a href="movie-info.html" class="card-link" data-title="dune">
+                <div class="card" style="background-image: url('https://images.unsplash.com/photo-1506318137071-a8e063b4b4bf?w=400')"><span class="card-title">Dune</span></div>
+            </a>
+        </div>
+        <p id="message" class="no-results">Type to start searching...</p>
     </section>
+
+    <script>
+        function filterMovies() {
+            let input = document.getElementById('movieSearch').value.toLowerCase();
+            let cards = document.getElementsByClassName('card-link');
+            let message = document.getElementById('message');
+            let found = false;
+
+            for (let i = 0; i < cards.length; i++) {
+                let title = cards[i].getAttribute('data-title');
+                
+                // Only show if input is not empty AND title matches
+                if (input.length > 0 && title.includes(input)) {
+                    cards[i].style.display = "block";
+                    found = true;
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+
+            // Update the message
+            if (input.length === 0) {
+                message.innerText = "Type to start searching...";
+                message.style.display = "block";
+            } else if (!found) {
+                message.innerText = "No movies found matching '" + input + "'";
+                message.style.display = "block";
+            } else {
+                message.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
