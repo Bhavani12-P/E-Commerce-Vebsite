@@ -1,16 +1,61 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CogniFlix | Latest Updates</title>
-    <style>/* [Copy CSS from index.html] */</style>
+    <title>CogniFlix | Latest Releases</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific hero for the Latest page */
+        .latest-hero {
+            height: 50vh;
+            background: linear-gradient(to right, #141414 20%, transparent 80%), 
+                        url('https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=1200') center/cover;
+            display: flex;
+            align-items: center;
+            padding-left: 50px;
+        }
+    </style>
 </head>
 <body>
-    <section class="row" style="margin-top: 80px;">
-        <h3>New Releases</h3>
+    <nav class="nav">
+        <div class="nav-left">
+            <a href="index.html" class="logo">COGNIFLIX</a>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="tv-shows.html" class="nav-link">TV Shows</a>
+            <a href="movies.html" class="nav-link">Movies</a>
+            <a href="latest.html" class="nav-link" style="color: white; font-weight: bold;">Latest</a>
+        </div>
+        <div class="nav-right">
+            <a href="search.html" class="nav-link">🔍 Search</a>
+            <a href="profile.html" class="nav-link">Profile</a>
+            <div class="profile-icon">BC</div>
+        </div>
+    </nav>
+
+    <header class="latest-hero">
+        <div class="hero-content">
+            <h1 style="color: #E50914;">New & Popular</h1>
+            <p>The latest titles added to your AI personalized feed this week.</p>
+        </div>
+    </header>
+
+    <section class="row">
+        <h3>Recently Added</h3>
         <div class="grid-container">
-            </div>
+            <a href="movie-info.html" class="card-link"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=400')"><span class="card-title">Wednesday</span></div></a>
+            <a href="movie-info.html" class="card-link"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1534447677768-be436bb09401?w=400')"><span class="card-title">Stranger Things</span></div></a>
+            <a href="movie-info.html" class="card-link"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1505506819641-fb0d45a563d2?w=400')"><span class="card-title">Dark</span></div></a>
+            <a href="movie-info.html" class="card-link"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1506318137071-a8e063b4b4bf?w=400')"><span class="card-title">Dune</span></div></a>
+            <a href="movie-info.html" class="card-link"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=400')"><span class="card-title">Interstellar</span></div></a>
+            <a href="movie-info.html" class="card-link"><div class="card" style="background-image: url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400')"><span class="card-title">Inception</span></div></a>
+            
+            <a href="#" class="card-link"><div class="card" style="background-color: #222;"><span class="card-title">Tenet</span></div></a>
+            <a href="#" class="card-link"><div class="card" style="background-color: #222;"><span class="card-title">Arrival</span></div></a>
+            <a href="#" class="card-link"><div class="card" style="background-color: #222;"><span class="card-title">Gravity</span></div></a>
+            <a href="#" class="card-link"><div class="card" style="background-color: #222;"><span class="card-title">The Matrix</span></div></a>
+            <a href="#" class="card-link"><div class="card" style="background-color: #222;"><span class="card-title">Avatar</span></div></a>
+            <a href="#" class="card-link"><div class="card" style="background-color: #222;"><span class="card-title">The Martian</span></div></a>
+        </div>
     </section>
 </body>
 </html>
