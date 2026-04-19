@@ -13,9 +13,42 @@
         .play { background: white; color: black; }
         .info { background: rgba(109, 109, 110, 0.7); color: white; }
         .row { padding: 20px 50px; }
-        .cards { display: flex; gap: 10px; overflow-x: scroll; scrollbar-width: none; }
-        .card { min-width: 200px; height: 120px; background: #333; border-radius: 4px; display: flex; align-items: center; justify-content: center; transition: transform 0.3s; }
-        .card:hover { transform: scale(1.05); }
+        
+        /* Updated Cards Container */
+        .cards { display: flex; gap: 15px; overflow-x: scroll; scrollbar-width: none; padding: 20px 0; }
+        .cards::-webkit-scrollbar { display: none; } /* Hide scrollbar for Chrome/Safari */
+
+        .card-link { text-decoration: none; color: inherit; display: block; }
+
+        .card { 
+            min-width: 200px; 
+            height: 120px; 
+            background: #333; 
+            border-radius: 4px; 
+            display: flex; 
+            align-items: flex-end; 
+            justify-content: center; 
+            transition: transform 0.3s, box-shadow 0.3s; 
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #444;
+        }
+
+        .card:hover { 
+            transform: scale(1.1); 
+            box-shadow: 0px 0px 15px rgba(229, 9, 20, 0.8); /* Red Glow */
+            z-index: 5;
+        }
+
+        .card-title {
+            background: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            padding: 8px 0;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -26,18 +59,42 @@
         <div class="hero-content">
             <h1>Trending: AI Revolution</h1>
             <p>Explore how Artificial Intelligence is transforming the modern digital landscape in this microservices-driven demo.</p>
-            <button class="play">Play</button>
-            <button class="info">More Info</button>
+            <button class="btn play">Play</button>
+            <button class="btn info">More Info</button>
         </div>
     </div>
     <div class="row">
         <h3>Recommended for You (AI Logic Applied)</h3>
         <div class="cards">
-            <div class="card">Inception</div>
-            <div class="card">Interstellar</div>
-            <div class="card">The Matrix</div>
-            <div class="card">Tenet</div>
-            <div class="card">Dark</div>
+            <a href="https://www.warnerbros.com/movies/inception" target="_blank" class="card-link">
+                <div class="card" style="background-image: url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=500'); background-size: cover;">
+                    <span class="card-title">Inception</span>
+                </div>
+            </a>
+
+            <a href="https://www.warnerbros.com/movies/interstellar" target="_blank" class="card-link">
+                <div class="card" style="background-image: url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=500'); background-size: cover;">
+                    <span class="card-title">Interstellar</span>
+                </div>
+            </a>
+
+            <a href="https://www.warnerbros.com/movies/matrix" target="_blank" class="card-link">
+                <div class="card" style="background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=500'); background-size: cover;">
+                    <span class="card-title">The Matrix</span>
+                </div>
+            </a>
+
+            <a href="https://www.warnerbros.com/movies/tenet" target="_blank" class="card-link">
+                <div class="card" style="background-image: url('https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=500'); background-size: cover;">
+                    <span class="card-title">Tenet</span>
+                </div>
+            </a>
+
+            <a href="https://www.netflix.com/title/80100172" target="_blank" class="card-link">
+                <div class="card" style="background-image: url('https://images.unsplash.com/photo-1505506819641-fb0d45a563d2?q=80&w=500'); background-size: cover;">
+                    <span class="card-title">Dark</span>
+                </div>
+            </a>
         </div>
     </div>
 </body>
