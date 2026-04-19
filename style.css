@@ -31,18 +31,19 @@
 
 .row {
     padding: 40px 50px;
-    background-color: #141414; /* Standard Netflix-style deep grey/black */
-    border-top: 1px solid #333; /* Subtle line to separate the sections */
+    background-color: #141414; /* Solid deep grey background */
+    border-top: 1px solid #333; /* Subtle line to separate from the hero */
+    position: relative;
+    z-index: 5;
+    margin-top: -10px; /* Closes any gap with the hero section */
 }
 
 .row h3 {
-    margin-top: 0;
     margin-bottom: 20px;
     font-size: 20px;
-    color: #e5e5e5; /* Soft white for better readability */
+    color: #e5e5e5;
     font-weight: 500;
 }
-
 /* Optional: Adding a slight gradient make it look more premium */
 .row {
     background: linear-gradient(to bottom, #181818 0%, #141414 100%);
