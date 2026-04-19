@@ -92,20 +92,7 @@
 }
 
 /* 2. The Card: Updated for fixed aspect ratio */
-.card {
-    position: relative;
-    height: 140px; /* Fixed height for consistency */
-    background-size: cover;
-    background-position: center;
-    border-radius: 4px; /* Matches the sleek UI */
-    display: flex;
-    align-items: flex-end;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s;
-    border: 1px solid #333; /* Darker border for a cleaner look */
-    overflow: hidden;
-}
+
 
 .card:hover {
     transform: scale(1.1);
@@ -123,9 +110,10 @@
 }
 
 .card {
-    background-size: cover;
-    background-position: center;
-    position: relative; /* Essential for title positioning */
+    background-size: cover;      /* Makes the image fit the card */
+    background-position: center;  /* Centers the poster */
+    background-repeat: no-repeat; /* Prevents tiling */
+    height: 130px;                /* Ensures the card has height to show the image */
 }
 
 .card-title {
