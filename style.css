@@ -74,3 +74,30 @@
     font-weight: 600;
     letter-spacing: 0.5px;
 }
+
+
+/* Movie Poster Database */
+.poster-dark { background-image: url('https://images.unsplash.com/photo-1505506819641-fb0d45a563d2?w=400'); }
+.poster-wednesday { background-image: url('https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=400'); }
+.poster-stranger { background-image: url('https://images.unsplash.com/photo-1534447677768-be436bb09401?w=400'); }
+.poster-interstellar { background-image: url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=400'); }
+.poster-inception { background-image: url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400'); }
+.poster-dune { background-image: url('https://images.unsplash.com/photo-1506318137071-a8e063b4b4bf?w=400'); }
+.poster-blade { background-image: url('https://images.unsplash.com/photo-1484589065579-248adc018243?w=400'); }
+.poster-moon { background-image: url('https://images.unsplash.com/photo-1538370910046-05ec0a6c634a?w=400'); }
+.poster-matrix { background-image: url('https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=400'); }
+.poster-tenet { background-image: url('https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=400'); }
+.poster-arrival { background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400'); }
+.poster-machina { background-image: url('https://images.unsplash.com/photo-1500462859194-84572864c245?w=400'); }
+.poster-prestige { background-image: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400'); }
+.poster-gravity { background-image: url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=400'); }
+.poster-avatar { background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=400'); }
+.poster-oblivion { background-image: url('https://images.unsplash.com/photo-1464802686167-b939a6910659?w=400'); }
+.poster-martian { background-image: url('https://images.unsplash.com/photo-1614728263952-84ea206f25ab?w=400'); }
+.poster-coherence { background-image: url('https://images.unsplash.com/photo-1534447677768-be436bb09401?w=400'); }
+
+/* Ensure cards handle images correctly */
+.card {
+    background-size: cover;
+    background-position: center;
+}
