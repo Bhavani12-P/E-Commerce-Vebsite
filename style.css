@@ -28,3 +28,22 @@
     font-size: 14px;
     padding: 5px 0;
 }
+
+.row {
+    padding: 40px 50px;
+    background-color: #141414; /* Standard Netflix-style deep grey/black */
+    border-top: 1px solid #333; /* Subtle line to separate the sections */
+}
+
+.row h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #e5e5e5; /* Soft white for better readability */
+    font-weight: 500;
+}
+
+/* Optional: Adding a slight gradient make it look more premium */
+.row {
+    background: linear-gradient(to bottom, #181818 0%, #141414 100%);
+}
