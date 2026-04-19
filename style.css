@@ -1,3 +1,68 @@
+/* Updated Header styling to match the Streamflix design */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    /* Black background with rounded corners */
+    background: #000; 
+    border-radius: 12px;
+    margin: 20px 50px;
+    position: fixed;
+    width: calc(100% - 100px);
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Background gradient to make the black bar pop */
+body {
+    background: radial-gradient(circle at top, #800000 0%, #141414 40%);
+    margin: 0;
+}
+
+.logo {
+    color: #ff0000;
+    font-family: 'Oswald', sans-serif; /* A bold, condensed font matches better */
+    font-size: 28px;
+    font-weight: 800;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    /* Red glowing effect */
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-link {
+    color: #999;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-link:hover, .active {
+    color: #fff;
+}
+
+/* Search Icon Circle */
+.search-icon {
+    border: 1px solid #999;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    color: #999;
+}
+
 .card-link {
     text-decoration: none;
     color: inherit;
